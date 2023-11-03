@@ -4,3 +4,5 @@ enum Role{
     STUDENT,
     PARENT
 }
+
+export default Role

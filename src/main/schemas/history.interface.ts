@@ -1,5 +1,6 @@
-interface History{
-    isDeleted: boolean;
-    deletedBy: User;
-    createdBy: User;
+
+export default interface History{
+    isDeleted: bigint;
+    deletedBy: bigint;
+    createdBy: bigint;
 }

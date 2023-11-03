@@ -1,10 +1,11 @@
 import { Schema, model } from "mongoose";
+import School from '../school.interface'
 
 const schoolSch: Schema = new Schema<School>({
     name: {type: String, required: true,unique: true},
     address: {type: String, required: true},
-    deletedBy: {type: String, required: true},
-    createdBy: {type: String, required: true},
+    createdBy: {type: Number, required: true},
+    deletedBy: {type: Number, required: true},
     isDeleted: {type: Boolean, required: true}
 }, {timestamps: true})
 
