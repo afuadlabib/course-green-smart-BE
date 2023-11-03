@@ -3,9 +3,6 @@ import { Request, Response } from "express";
 
 const routerRoot: Router = Router()
 
-routerRoot
-    
-    
-
+routerRoot      
 
 export default routerRoot;
