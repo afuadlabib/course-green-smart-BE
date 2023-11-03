@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import School from '../school.interface'
+import School from '../School'
 
 const schoolSch: Schema = new Schema<School>({
     name: {type: String, required: true,unique: true},

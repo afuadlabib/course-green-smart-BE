@@ -1,4 +1,4 @@
-import History from "./history.interface";
+import History from "./History";
 
 export default interface Activity extends History{
     ipAddress: string;

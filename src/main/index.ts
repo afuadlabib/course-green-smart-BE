@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-import routerRoot from './routers/router.root'
+import routerRoot from './routes/router.root'
 import { Request, Response } from "express";
 import { connectDB } from './config/db.config';
 
