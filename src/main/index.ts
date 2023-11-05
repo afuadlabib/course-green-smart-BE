@@ -13,25 +13,25 @@ connectDB()
 const app: Express = express();
 const port: number = parseInt(<string> process.env.PORT);
 
-if (process.env.DEV === "true") {
-    app.use("/", (req: Request, res: Response, next: Function): void => {
-        res.set("Access-Control-Allow-Origin", "*");
-        res.set(
-            "Access-Control-Allow-Methods",
-            "GET, POST, OPTIONS, HEAD, PATCH, DELETE"
-        );
-        res.set(
-            "Access-Control-Allow-Headers",
-            "Authorization, Origin, X-Requested-With, Content-Type,  Accept, Develop-by, bb-token, User-Agent, "
-        );
-        res.set("Access-Control-Expose-Headers", "*");
-        if (req.method.toLowerCase() === "options") {
-            res.end("OKE");
-        } else {
-            next();
-        }
-    });
-}
+// if (process.env.DEV === "true") {
+//     app.use("/", (req: Request, res: Response, next: Function): void => {
+//         res.set("Access-Control-Allow-Origin", "*");
+//         res.set(
+//             "Access-Control-Allow-Methods",
+//             "GET, POST, OPTIONS, HEAD, PATCH, DELETE"
+//         );
+//         res.set(
+//             "Access-Control-Allow-Headers",
+//             "Authorization, Origin, X-Requested-With, Content-Type,  Accept, Develop-by, bb-token, User-Agent, "
+//         );
+//         res.set("Access-Control-Expose-Headers", "*");
+//         if (req.method.toLowerCase() === "options") {
+//             res.end("OKE");
+//         } else {
+//             next();
+//         }
+//     });
+// }
 
 app
     .use(cors())
