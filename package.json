@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon ./src/main/index.ts",
     "build": "rm -rf build/ && tsc -p . -w",
-    "start": "node ./build/src/main/index.js",
-    "seeder": "node ./build/src/main/seeder/index.js"
+    "start": "node ./build/main/index.js",
+    "seeder": "node ./build/main/seeders/index.js"
   },
   "repository": "git+https://github.com/afuadlabib/course-green-smart-BE.git",
   "keywords": [],

@@ -1,4 +1,4 @@
-import express from "express";
+import express, {Express} from "express";
 import Routes from "../routes/routes";
 import UserService from "../services/userService";
 import UserRouter from "../routes/userRouter";
@@ -6,25 +6,25 @@ import UserController from "../controllers/userController";
 
 
 export default class ConfigAppContext{
-    static app = express();
+    static app: Express = express();
 
-    static port = parseInt(<string> process.env.PORT);
+    static port: number = parseInt(<string> process.env.PORT);
 
-    static userServiceUrl = <string> process.env.USERSERVICE_URL;
+    static userServiceUrl: string = <string> process.env.USERSERVICE_URL;
 
     public static createRoutes(): Routes{
         return new Routes()
     }
 
-    public static createUserRouter(){
+    public static createUserRouter(): UserRouter {
         return new UserRouter()
     }
 
-    public static createUserController(){
+    public static createUserController(): UserController{
         return new UserController()
     }
 
-    public static createUserService(){
+    public static createUserService(): UserService{
         return new UserService()
     }
 }

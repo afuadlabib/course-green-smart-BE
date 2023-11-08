@@ -1,10 +1,11 @@
 import { Router } from "express";
 import ConfigAppContext from "../config/configAppContext";
+import UserRouter from "./userRouter";
 
 export default class Routes {
-    private router = Router();
+    private router: Router = Router();
 
-    private userRouter = ConfigAppContext.createUserRouter();
+    private userRouter : UserRouter = ConfigAppContext.createUserRouter();
 
     public useRouter() {
         return  this.router
