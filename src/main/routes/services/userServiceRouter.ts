@@ -1,6 +1,5 @@
-import { Application, Router } from "express";
+import { Router } from "express";
 import AppContext from "../../config/configAppContext";
-import AuthController from "../../controllers/authController";
 import AuthRouter from "./users/authRouter";
 import TeacherRouter from "./users/teacherRouter";
 

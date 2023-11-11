@@ -17,7 +17,7 @@ export default class TeacherController {
             });
             return res.status(status).json(data)
         } catch (error: any) {
-            const { status, data } = error.response
+            const { status, data } = error?.response
             return res.status(status).json(data);
         }
     }
@@ -32,7 +32,7 @@ export default class TeacherController {
             });
             return res.status(status).json(data)
         } catch (error: any) {
-            const { status, data } = error.response
+            const { status, data } = error?.response
             return res.status(status).json(data);
         }
     }
@@ -49,7 +49,7 @@ export default class TeacherController {
             })
             return res.status(status).json(data)
         } catch (error: any) {
-            const { status, data } = error.response
+            const { status, data } = error?.response
             return res.status(status).json(data);
         }
     }
@@ -66,7 +66,7 @@ export default class TeacherController {
             })
             return res.status(status).json(data)
         } catch (error: any) {
-            const { status, data } = error.response
+            const { status, data } = error?.response
             return res.status(status).json(data);
         }
     }
@@ -82,7 +82,7 @@ export default class TeacherController {
             })
             return res.status(status).json(data)
         } catch (error: any) {
-            const { status, data } = error.response
+            const { status, data } = error?.response
             return res.status(status).json(data);
         }
     }
