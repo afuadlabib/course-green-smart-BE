@@ -1,30 +1,40 @@
-import express, {Express} from "express";
+import express, { Express } from "express";
 import Routes from "../routes/routes";
-import UserService from "../services/userService";
-import UserRouter from "../routes/userRouter";
-import UserController from "../controllers/userController";
+import UserServiceRouter from "../routes/services/userServiceRouter";
+import AuthController from "../controllers/authController";
+import AuthRouter from "../routes/services/users/authRouter";
+import TeacherController from "../controllers/teacherController";
+import TeacherRouter from "../routes/services/users/teacherRouter";
 
-
-export default class ConfigAppContext{
+export default class AppContext {
     static app: Express = express();
 
-    static port: number = parseInt(<string> process.env.PORT);
+    static port: number = parseInt(<string>process.env.PORT);
 
-    static userServiceUrl: string = <string> process.env.USERSERVICE_URL;
+    static userServiceUrl: string = <string>process.env.USERSERVICE_URL;
 
-    public static createRoutes(): Routes{
-        return new Routes()
+    public static createRoutes(): Routes {
+        return new Routes();
     }
 
-    public static createUserRouter(): UserRouter {
-        return new UserRouter()
+    public static createServiceRouter(): UserServiceRouter {
+        return new UserServiceRouter();
+    }
+    public static createAuthRouter(): AuthRouter {
+        return new AuthRouter();
     }
 
-    public static createUserController(): UserController{
-        return new UserController()
+    public static createAuthController(): AuthController {
+        return new AuthController();
     }
 
-    public static createUserService(): UserService{
-        return new UserService()
+    public static createTeacherController(): TeacherController{
+        return new TeacherController()
     }
+
+    public static createTeacherRouter(): TeacherRouter{
+        return new TeacherRouter()
+    }
+
 }
+
