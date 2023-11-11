@@ -6,21 +6,19 @@
   "scripts": {
     "dev": "nodemon ./src/main/index.ts",
     "build": "rm -rf build/ && tsc -p . -w",
-    "start": "node ./build/src/main/index.js",
-    "seeder": "node ./build/src/main/seeder/index.js"
+    "start": "node ./build/main/index.js",
+    "seeder": "node ./build/main/seeders/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/afuadlabib/course-green-smart-BE.git"
-  },
+  "repository": "git+https://github.com/afuadlabib/course-green-smart-BE.git",
   "keywords": [],
-  "author": "",
+  "author": "Ahmad Fuad",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/afuadlabib/course-green-smart-BE/issues"
   },
   "homepage": "https://github.com/afuadlabib/course-green-smart-BE#readme",
   "dependencies": {
+    "axios": "^1.6.1",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
@@ -35,6 +33,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/bcrypt": "^5.0.1",
     "@types/cors": "^2.8.15",
     "@types/dotenv": "^8.2.0",
