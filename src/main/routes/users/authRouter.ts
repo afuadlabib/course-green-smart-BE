@@ -13,7 +13,7 @@ export default class AuthRouter {
 
             .post("/register", this.authController.register)
 
-            .get("/isMe", this.authController.register)
+            .get("/isMe", this.authController.refreshToken)
 
             .post("/login", this.authController.login)
 
