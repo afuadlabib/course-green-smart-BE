@@ -3,12 +3,12 @@ import axios from "axios";
 import AppContext from "../config/configAppContext";
 
 
-export default class TeacherController {
+export default class AuthorController {
 
     public async find(req: Request, res: Response) {
         try {
             const { data, status } = await axios({
-                url: AppContext.userServiceUrl + "/teachers",
+                url: AppContext.userServiceUrl + "/authors",
                 headers: {
                     Authorization: req.headers.authorization
                 }
@@ -23,7 +23,7 @@ export default class TeacherController {
     public async findById(req: Request, res: Response) {
         try {
             const { data, status } = await axios({
-                url: `${AppContext.userServiceUrl}/teachers/${req.params.id}`,
+                url: `${AppContext.userServiceUrl}/authors/${req.params.id}`,
                 headers: {
                     Authorization: req.headers.authorization
                 }
@@ -39,7 +39,7 @@ export default class TeacherController {
         try {
             const { data, status } = await axios({
                 method: "post",
-                url: `${AppContext.userServiceUrl}/teachers`,
+                url: `${AppContext.userServiceUrl}/authors`,
                 data: req.body,
                 headers: {
                     Authorization: req.headers.authorization
@@ -56,7 +56,7 @@ export default class TeacherController {
         try {
             const { data, status } = await axios({
                 method: "put",
-                url: `${AppContext.userServiceUrl}/teachers/${req.params.id}`,
+                url: `${AppContext.userServiceUrl}/authors/${req.params.id}`,
                 data: req.body,
                 headers: {
                     Authorization: req.headers.authorization
@@ -72,7 +72,7 @@ export default class TeacherController {
         try {
             const { data, status } = await axios({
                 method: "delete",
-                url: `${AppContext.userServiceUrl}/teachers/${req.params.id}`,
+                url: `${AppContext.userServiceUrl}/authors/${req.params.id}`,
                 data: req.body,
                 headers: {
                     Authorization: req.headers.authorization

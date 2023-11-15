@@ -1,9 +1,7 @@
 import { Request, Response } from "express";
 import axios from "axios";
 import AppContext from "../config/configAppContext";
-import { configDotenv } from "dotenv";
 
-configDotenv();
 
 export default class AuthController {
 

@@ -1,6 +1,6 @@
 import { Router } from "express";
-import AppContext from "../../../config/configAppContext";
-import AuthController from "../../../controllers/authController";
+import AppContext from "../../config/configAppContext";
+import AuthController from "../../controllers/authController";
 
 
 export default class AuthRouter {
