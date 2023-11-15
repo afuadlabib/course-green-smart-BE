@@ -22,6 +22,7 @@ export default class UserRouter {
             .use("/auths", this.authRouter.useRouter())
 
             .use("/teachers", this.teacherRouter.useRouter())
+            
 
             .use("/students", this.studentRouter.useRouter())
 

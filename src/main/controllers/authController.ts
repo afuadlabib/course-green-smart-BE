@@ -49,6 +49,21 @@ export default class AuthController {
         }
     }
 
+    public async refreshToken(req: Request, res: Response) {
+        try {
+            const { data, status } = await axios({
+                url: `${AppContext.userServiceUrl}/isMe`,
+                headers: {
+                    Authorization: req.headers.authorization
+                }
+            })
+            return res.status(status).json(data)
+        } catch (error: any) {
+            const { status, data } = error?.response
+            return res.status(status).json(data);
+        }
+    }
+
     public async login(req: Request, res: Response) {
         try {
             const { data, status } = await axios({
