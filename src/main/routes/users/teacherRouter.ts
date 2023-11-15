@@ -1,6 +1,6 @@
 import { Router } from "express";
-import AppContext from "../../../config/configAppContext";
-import TeacherController from "../../../controllers/teacherController";
+import AppContext from "../../config/configAppContext";
+import TeacherController from "../../controllers/teacherController";
 
 
 export default class TeacherRouter {

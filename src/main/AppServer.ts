@@ -26,7 +26,7 @@ export default class AppServer {
             })
             .use("/api/v1", this.routes.useRouter())
             .listen(this.port, (): void => {
-                console.log(`Server: ${platform} Running Port: ${this.port}`);
+                console.log(`[${new Date()}]: Server ${platform} Running Port ${this.port}`);
             });
     }
 }
